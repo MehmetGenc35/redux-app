@@ -1,8 +1,9 @@
 import React from 'react'
+import { $t } from '../helpers/locale-helper'
 
 const ContactPage = () => {
   return (
-    <div>contact-page</div>
+    <div>{$t('contact-page')}</div>
   )
 }
 

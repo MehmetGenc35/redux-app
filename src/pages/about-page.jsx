@@ -1,8 +1,11 @@
 import React from 'react'
+import { $t } from '../helpers/locale-helper'
 
-const AboutPage = () => {
+const AboutPage = () => {  
+
+
   return (
-    <div>AboutPage</div>
+    <div>{$t('about-page')}</div>
   )
 }
 

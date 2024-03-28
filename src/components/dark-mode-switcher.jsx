@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Form } from "react-bootstrap";
 import { useDispatch, useSelector} from "react-redux";
 import { setDarkMode } from "../store/slices/theme-slice";
+import { $t } from "../helpers/locale-helper";
 const DarkModeSwitcher = () => {
 
     //var olan state e ulaşmak için "useSelector" hook u kullanılır
@@ -41,13 +42,14 @@ const DarkModeSwitcher = () => {
 
 
 
-    return (
-        <Form.Check // prettier-ignore
-            type="switch"
-            id="custom-switch"
-            label={darkMode?"Light Mode":"Dark Mode"}
-            onChange={handleMode}
-        />
-    );
+	return (
+		<Form.Check // prettier-ignore
+			type="switch"
+			id="custom-switch"
+			label={darkMode ? $t("light-mode") : $t("dark-mode")}
+			checked={darkMode}
+			onChange={handleMode}
+		/>
+	);
 };
 export default DarkModeSwitcher;
